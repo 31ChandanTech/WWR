@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Weather Report</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <h2 class="logo">WWR <i class="fa-solid fa-cloud-sun"></i></h2>
+        <h1 class="title">World Weather Report</h1>
+        <div class="search_box">
+            <input type="text" name="country" id="country" autofocus placeholder="Search country or state"/>
+            <button id="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </header>
+
+    <div class="Weather_navbar">
+            <button id="today">Weather Today</button>
+            <button id="hourly">Weather Hourly</button>
+            <button id="forcast">03 Day Forecast</button>
+    </div>
+
+    <div id="Weather_details_container">
+        <div class="counter_name" id="country_container">
+            <div class="country" id="countryName"></div>
+            <div class="state" id="region"></div>
+        </div>
+        <div class="weather_today" id="wether_container">
+            <div class="left">
+                <div class="row1">
+                    <div class="col1">
+                        <h3 class="current">NOW</h3>
+                        <P class="para" id="temp"></P>
+                        <P class="para" id="wether_type"></P>
+                    </div>
+                    <div class="col2" id="cloud_img">
+                    </div>
+                </div>
+                <div class="row2">
+                    <P class="para" id="feelsLike"></P>
+                    <P class="para" id="forecast_item"></P>
+                    <P class="para" id="wind_blow"></P>
+                </div>
+            </div>
+            <div class="middle">
+                <table>
+                    <tr>
+                        <th>Location:</th>
+                        <td id="current_city"></td>
+                    </tr>
+                    <tr>
+                        <th>Current Time:</th>
+                        <td id="live_time"></td>
+                    </tr>
+                    <tr>
+                        <th>Latest Report:</th>
+                        <td id="current_time"></td>
+                    </tr>
+                    <tr>
+                        <th>Visibility:</th>
+                        <td id="visiblity"></td>
+                    </tr>
+                    <tr>
+                        <th>Pressure:</th>
+                        <td id="pressure"></td>
+                    </tr>
+                    <tr>
+                        <th>Humidity:</th>
+                        <td id="humidity"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="weather_hourly" id="weather_hourly">
+        </div>
+        <div class="forecast" id="forecast">
+            <table>
+                <thead>
+                    <tr>
+                        <td class="border"></td>
+                        <td class="border" colspan="2">Conditions</td>
+                        <td class="border" colspan="3">Comfort</td>
+                        <td class="border mobile_screen_display_none" colspan="2">Precipitation</td>
+                        <td class="border mobile_screen_display_none" colspan="3">Sun</td>
+                    </tr>
+                    <tr>
+                        <th class="border">Days</th>
+                        <th class="border-bottom">Temperature</th>
+                        <th class="border-right border-bottom">Weather</th>
+                        <th class="border-bottom">Feels Like</th>
+                        <th class="border-bottom">Wind</th>
+                        <th class="border-right border-bottom">Humidity</th>
+                        <th class="border-bottom mobile_screen_display_none">Chance</th>
+                        <th class="border-right border-bottom mobile_screen_display_none">Amount</th>
+                        <th class="border-bottom mobile_screen_display_none">UV</th>
+                        <th class="border-bottom mobile_screen_display_none">Sunrise</th>
+                        <th class="border-bottom mobile_screen_display_none">Sunset</th>
+                    </tr>
+                </thead>
+                <tbody id="table_tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer">CHANDAN &COPY; 2023 || world weather report</p>
+    </footer>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

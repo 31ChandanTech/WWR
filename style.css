@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
+/* font-family: 'Ubuntu', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
+    url("bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ************header************ */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 2px 1px #836060;
+  padding: 25px 50px;
+}
+
+header .logo {
+  color: blue;
+  letter-spacing: 2px;
+}
+
+header .title {
+  color: #ffffff;
+  word-spacing: 10px;
+}
+
+header .search_box {
+  display: flex;
+}
+header .search_box input {
+  width: 200px;
+  height: 50px;
+  border: 0.5px solid #ffffff;
+  border-radius: 6px 0 0 6px;
+  padding: 0 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background: transparent;
+  color: #ffffff;
+}
+header .search_box button {
+  width: 50px;
+  height: 50px;
+  border: 0.5px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+header .search_box button:hover {
+  background: #555151;
+}
+
+/* ****************************main section*************** */
+
+.Weather_navbar {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.Weather_navbar button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 0.5px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  margin: 0 5px;
+}
+.Weather_navbar button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.Weather_navbar #today {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* *****************************weather details container************ */
+
+#Weather_details_container {
+  width: 75%;
+  margin: auto;
+  background: linear-gradient(
+    rgba(225, 225, 225, 0.4),
+    rgba(225, 225, 225, 0.4)
+  );
+  padding: 25px 25px;
+}
+#Weather_details_container .counter_name {
+  display: flex;
+  justify-content: space-around;
+  font-size: 35px;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+#Weather_details_container .weather_today {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+/* ************************************************weather today********** */
+#Weather_details_container .weather_today .left .row1 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#Weather_details_container .weather_today .left .row1 .col1 h3,
+#Weather_details_container .weather_today .middle table tr th {
+  font-weight: 600;
+  font-size: 18px;
+  color: #010638;
+}
+#Weather_details_container .weather_today .left .row1 .col1 h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+#Weather_details_container .weather_today .left .para {
+  margin-bottom: 8px;
+}
+#Weather_details_container .weather_today .middle table tr th {
+  text-align: start;
+  padding: 10px 5px;
+}
+
+/* *******************************weather hourley************** */
+
+#Weather_details_container .weather_hourly {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: none;
+}
+#Weather_details_container .weather_hourly .card {
+  width: 23%;
+  padding: 8px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 6px #ffffff;
+  margin-bottom: 25px;
+}
+#Weather_details_container .weather_hourly .card .condition {
+  display: flex;
+  justify-content: space-between;
+}
+#Weather_details_container .weather_hourly .card p,
+div {
+  margin-bottom: 8px;
+}
+
+/* ******************************weather Forecast*************** */
+
+#Weather_details_container .forecast {
+  width: 100%;
+  display: none;
+}
+#Weather_details_container .forecast table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#Weather_details_container .forecast table tr td,
+th {
+  padding: 5px 10px 5px 5px;
+}
+#Weather_details_container .forecast table tr .border {
+  border: 0.5px solid black;
+}
+#Weather_details_container .forecast table tr .border-right {
+  border-right: 0.5px solid black;
+}
+#Weather_details_container .forecast table tr .border-bottom {
+  border-bottom: 0.5px solid black;
+}
+#Weather_details_container .forecast table tbody {
+  text-align: center;
+}
+
+/* **********************footer********************* */
+
+.footer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+  padding: 15px 0;
+  margin-top: 17px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+/* *******************************media query************************* */
+
+ @media only screen and (max-width: 1024px){
+    #Weather_details_container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 887px){
+    header {
+        justify-content: center;
+        flex-wrap: wrap;
+        line-height: 8vh;
+    }
+    #Weather_details_container .counter_name {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    #Weather_details_container .counter_name .state{
+        font-size: 18px;
+    }
+    #Weather_details_container .counter_name .state b{
+        font-weight: 400;
+    }
+    header .logo,header .title {
+        margin: 0 25px 0 0;
+    }
+    #Weather_details_container .forecast table  tr .mobile_screen_display_none{
+        display: none;
+    }
+} 
+@media only screen and (max-width: 800px){
+    #Weather_details_container .weather_hourly .card {
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 683px){
+    #Weather_details_container .weather_hourly .card {
+        width: 48%;
+    }
+}
+@media only screen and (max-width: 650px){
+    #Weather_details_container .weather_today{
+        flex-direction: column;
+    }
+    #Weather_details_container .weather_today .left{
+        border: 0.5px solid #000000;
+        padding: 5px;
+    }
+} 
+@media only screen and (max-width: 612px){
+    header {
+        padding: 5px;
+    }
+} 
+
+@media only screen and (max-width: 553px){
+    #Weather_details_container {
+        padding: 5px;
+    }
+    #Weather_details_container .forecast table  tr .mobile_screen_display_none{
+        display: none;
+    }
+    #Weather_details_container .weather_hourly .card {
+        width: 100%;
+    }
+    #Weather_details_container .weather_hourly {
+        padding: 0 10px;
+    }
+} 
+@media only screen and (max-width: 499px){
+  body {
+    background-repeat: repeat;
+}
+    .Weather_navbar {
+      flex-direction: column;
+  }
+  .Weather_navbar button {
+    margin: 5px 8px;
+}
+#Weather_details_container .forecast table {
+  font-size: 14px;
+}
+#Weather_details_container .forecast table tr td, th {
+  padding: 2px;
+}
+}
+@media only screen and (max-width: 450px){
+#Weather_details_container .forecast table {
+  font-size: 12px;
+}
+header .logo, header .title {
+  margin: 0;
+}
+}
+@media only screen and (max-width: 410px){
+  #Weather_details_container .forecast table {
+    font-size: 10px;
+  }
+  header .title{
+    font-size: 25px;
+  }
+  }
